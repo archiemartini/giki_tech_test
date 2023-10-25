@@ -4,7 +4,7 @@ import LeafIconSlim from './SvgComponents/LeafIconSlim';
 import LeafIconWide from './SvgComponents/LeafIconWide';
 import ButterflyIcon from './SvgComponents/ButterflyIcon';
 
-const HeroImage = ({
+const Hero = ({
   footprintValue,
 }: {
   footprintValue: string
@@ -92,4 +92,4 @@ const styles = StyleSheet.create({
     fontWeight: '100',
   },
 });
-export default HeroImage;
+export default Hero;

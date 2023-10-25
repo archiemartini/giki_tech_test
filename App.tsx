@@ -1,6 +1,7 @@
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import formatNumberWithCommas from './utils/formatNumberWithCommas';
-import HeroImage from './components/HeroImage';
+import Hero from './components/Hero';
 
 // replicating value received from backend, assuming an integer value
 const FOOTPRINT_VALUE = 7565
@@ -16,7 +17,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <HeroImage footprintValue={footprintValue}/>
+      <Hero footprintValue={footprintValue}/>
       <View style={styles.estimationContainer}>
         <View style={{width: 100}}>
           <Text 
