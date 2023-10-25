@@ -1,15 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, ImageSourcePropType } from 'react-native';
+import LeafSvg1 from './SvgComponents/LeafSvg1';
 
 const HeroImage: React.FC = () => {
   const purpleCloudPNG: ImageSourcePropType = require('../assets/purple_cloud.png');
   const whiteCloudPNG: ImageSourcePropType = require('../assets/white_cloud.png');
-  // const leaf1: ImageSourcePropType = require('../assets/leaf1.svg');
-  // const leaf2: ImageSourcePropType = require('../assets/leaf2.svg');
-  // const butterfly: ImageSourcePropType = require('../assets/butterfly.svg');
 
   return (
-    <View>
+    <View >
       <Text>HeroImage</Text>
       <Image
         style={styles.purpleCloud}
@@ -19,6 +17,8 @@ const HeroImage: React.FC = () => {
         style={styles.whiteCloud}
         source={whiteCloudPNG}
       />
+
+      <LeafSvg1 width={50} height={50}/>
     </View>
   );
 };
@@ -34,6 +34,6 @@ const styles = StyleSheet.create({
     aspectRatio: 974 / 671,
     zIndex: 1,
   },
-})
+});
 
 export default HeroImage;
