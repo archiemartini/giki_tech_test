@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, ImageSourcePropType } from 'react-native';
-import LeafIcon1 from './SvgComponents/LeafIcon1';
+import LeafIconSlim from './SvgComponents/LeafIconSlim';
 
 const HeroImage: React.FC = () => {
   const purpleCloudPNG: ImageSourcePropType = require('../assets/purple_cloud.png');
@@ -18,7 +18,7 @@ const HeroImage: React.FC = () => {
         source={whiteCloudPNG}
       />
 
-      <LeafIcon1/>
+      <LeafIconSlim/>
     </View>
   );
 };

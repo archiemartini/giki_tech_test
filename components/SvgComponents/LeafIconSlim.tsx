@@ -9,7 +9,7 @@ interface LeafIconProps {
   style?: StyleProp<ViewStyle>;
 }
 
-const LeafIcon1 = ({
+const LeafIconSlim = ({
   width = 55,
   height = 48,
   style,
@@ -38,4 +38,4 @@ const LeafIcon1 = ({
   );
 }
 
-export default LeafIcon1;
+export default LeafIconSlim;
