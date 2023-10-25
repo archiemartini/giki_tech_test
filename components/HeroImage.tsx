@@ -43,25 +43,26 @@ const HeroImage = ({
         <ButterflyIcon
           style={{position: 'absolute', top: 0, left: 0, marginTop: 25, marginLeft: 25}}
         />
-        <View style={{position: 'absolute'}}>
-        <Text 
-            style={[styles.pink, styles.text]}
-          >
-            Your footprint
-          </Text>
-          <Text style={[{fontSize: 25, color: '#5e2b68'}, styles.text]}>
-            {footprintValue}
-            <Text style={{fontWeight: 'bold', fontSize: 12}}
-            > kg
+        <View style={{position: 'absolute', alignItems: 'center'}}>
+          <Text 
+              style={{fontSize: 12, marginTop: 10, color: '#c44170', ...styles.text}}
+            >
+              Your footprint
             </Text>
-          </Text>
-          <Text style={{fontSize: 8, color: '#5e2b68', ...styles.text}}>
-            of carbon emissions
-          </Text>
-          <View>
-            
-          </View>
-
+            <Text style={[{fontSize: 25, color: '#5e2b68'}, styles.text]}>
+              {footprintValue}
+              <Text style={{fontWeight: 'bold', fontSize: 12}}
+              > kg
+              </Text>
+            </Text>
+            <Text style={{fontSize: 8, color: '#5e2b68', ...styles.text}}>
+              of carbon emissions
+            </Text>
+            <View 
+              style={styles.takeAStep}
+            >
+              <Text style={{color: '#fff', fontSize: 10, paddingHorizontal: -25, ...styles.text}}>Take a Step</Text>
+            </View>
         </View>
     </View>
   );
@@ -81,6 +82,14 @@ const styles = StyleSheet.create({
   },
   pink: {
     color: '#c44170'
-  }
+  },
+  takeAStep: {
+    marginTop: 5,
+    paddingHorizontal: 8,
+    paddingVertical: 5,
+    backgroundColor: '#5e2b68',
+    borderRadius: 50,
+    fontWeight: '100',
+  },
 });
 export default HeroImage;

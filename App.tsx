@@ -19,28 +19,39 @@ export default function App() {
       <HeroImage footprintValue={footprintValue}/>
       <View style={styles.estimationContainer}>
         <View style={{width: 100}}>
-          <Text style={[styles.pink, styles.text]}>End of year target</Text>
           <Text 
-            style={[{fontSize: 25}, styles.purple, styles.text]}
+            style={{color: '#c44170', ...styles.text}}
+          >
+            End of year target
+          </Text>
+          <Text 
+            style={{fontSize: 25, color: '#5e2b68', ...styles.text}}
           >
             {endOfYearTargetValue}
-            <Text style={{fontWeight: 'bold', fontSize: 12}}
+            <Text style={{fontWeight: 'bold', fontSize: 10}}
             > kg
             </Text>
           </Text>
-          <Text style={{fontSize: 8, color: '#5e2b68', ...styles.text}}>
+          <Text 
+            style={{fontSize: 8, color: '#5e2b68', ...styles.text}}
+          >
             of carbon emissions
           </Text>
         </View>
-        <View style={{width: 100}}>
+        <View 
+          style={{width: 100}}
+        >
           <Text 
-            style={[styles.pink, styles.text]}
+            style={{color: '#c44170', ...styles.text}}
           >
             Left to cut this year
           </Text>
-          <Text style={[{fontSize: 25, color: '#5e2b68'}, styles.text]}>
+          <Text 
+            style={[{fontSize: 25, color: '#5e2b68'}, styles.text]}
+          >
             {leftToCutValue}
-            <Text style={{fontWeight: 'bold', fontSize: 12}}
+            <Text 
+              style={{fontWeight: 'bold', fontSize: 10}}
             > kg
             </Text>
           </Text>
@@ -85,14 +96,6 @@ const styles = StyleSheet.create({
     color: '#5e2b68',
     borderRadius: 100,
     fontWeight: 'bold',
+    fontSize: 10
   },
-  pink: {
-    color: '#c44170'
-  },
-  purple: {
-    color: '#5e2b68'
-  },
-  lilac: {
-    color: '#ebd7ee'
-  }
 });
