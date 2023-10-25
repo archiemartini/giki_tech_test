@@ -9,6 +9,7 @@ Things I will do:
 - Going to add setup instructions to README
 - Make take a step open browser to my website
 - Extract everything into a single screen?
+- Increase size, a little small atm in the center of screen
 
 Things I'd like to do:
 - Couldn't get the font any thicker
