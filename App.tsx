@@ -3,19 +3,20 @@ import formatNumberWithCommas from './utils/formatNumberWithCommas';
 import HeroImage from './components/HeroImage';
 
 // replicating value received from backend, assuming an integer value
-const FOOTPRINT = 7565
+const FOOTPRINT_VALUE = 7565
 const END_OF_YEAR_TARGET_VALUE = 5855
 const LEFT_TO_CUT_VALUE = 409
 const TWENTY_THIRTY_TARGET_VALUE = 2500
 
 export default function App() {
+  const footprintValue = formatNumberWithCommas(FOOTPRINT_VALUE)
   const endOfYearTargetValue = formatNumberWithCommas(END_OF_YEAR_TARGET_VALUE)
   const leftToCutValue = formatNumberWithCommas(LEFT_TO_CUT_VALUE)
   const twentyThirtyTargetValue = formatNumberWithCommas(TWENTY_THIRTY_TARGET_VALUE)
 
   return (
     <View style={styles.container}>
-      <HeroImage />
+      <HeroImage footprintValue={footprintValue}/>
       <View style={styles.estimationContainer}>
         <View style={{width: 100}}>
           <Text style={[styles.pink, styles.text]}>End of year target</Text>
@@ -58,7 +59,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#999',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 25
