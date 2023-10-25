@@ -1,14 +1,27 @@
 import * as React from 'react';
+import { StyleProp, ViewStyle } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 
-const LeafSvg1 = (props) => {
+
+interface LeafIconProps {
+  width?: number;
+  height?: number;
+  style?: StyleProp<ViewStyle>;
+}
+
+const LeafIcon1 = ({
+  width = 55,
+  height = 48,
+  style,
+}: LeafIconProps) => {
   return (
     <Svg
-      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
       viewBox="0 0 55 48"
       fill="none"
       role="img"
-      {...props}
+      style={style}
     >
       <Path
         d="M4.15098 47.1479C7.21505 35.5614 20.9088 10.0579 51.1715 0.735964C45.8426 13.4962 28.9781 40.6429 4.15098 47.1479Z"
@@ -25,4 +38,4 @@ const LeafSvg1 = (props) => {
   );
 }
 
-export default LeafSvg1;
+export default LeafIcon1;
