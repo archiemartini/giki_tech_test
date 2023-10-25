@@ -9,35 +9,31 @@ const HeroImage: React.FC = () => {
   const whiteCloudPNG: ImageSourcePropType = require('../assets/white_cloud.png');
 
   return (
-    <View >
-      <Text>HeroImage</Text>
-      <Image
-        style={styles.purpleCloud}
-        source={purpleCloudPNG}
-      />
-      <Image
-        style={styles.whiteCloud}
-        source={whiteCloudPNG}
-      />
-
-      <LeafIconSlim/>
-      <LeafIconWide/>
-      <ButterflyIcon />
+    <View style={styles.container}>
+        <Image
+          style={{height: 165, position: 'absolute'}}
+          source={purpleCloudPNG}
+          resizeMode="contain"
+        />
+        <Image
+          style={{height: 150, position: 'relative'}}
+          source={whiteCloudPNG}
+          resizeMode="contain"
+        />
+        <ButterflyIcon
+          style={{position: 'absolute', top: 0, left: 0, marginTop: 25, marginLeft: 25}}
+        />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  purpleCloud: {
-    height: (325 * 734) / 1111,
-    aspectRatio: 1111 / 734,
-    zIndex: 0,
-  },
-  whiteCloud: {
-    height: (200 * 671) / 974,
-    aspectRatio: 974 / 671,
-    zIndex: 1,
-  },
+  container: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 300,
+    height: 200,
+  }
 });
-
 export default HeroImage;
