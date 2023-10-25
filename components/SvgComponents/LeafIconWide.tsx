@@ -5,16 +5,18 @@ import Svg, { Path } from 'react-native-svg';
 interface LeafIconWideProps {
   width?: number;
   height?: number;
-  style?: StyleProp<ViewStyle>
+  style?: StyleProp<ViewStyle>;
+  rotation?: string;
 }
 
 const LeafIconWide = ({
   width = 86, 
   height = 30,
-  style
+  style,
+  rotation = '0deg'
 }: LeafIconWideProps) => {
   return (
-    <View style={style}>
+    <View style={[style, { transform: [{ rotate: rotation }] }]}>
       <Svg 
         width={width} 
         height={height} 

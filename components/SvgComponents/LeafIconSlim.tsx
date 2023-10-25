@@ -7,15 +7,17 @@ interface LeafIconSlimProps {
   width?: number;
   height?: number;
   style?: StyleProp<ViewStyle>;
+  rotation?: string;
 }
 
 const LeafIconSlim = ({
   width = 55,
   height = 48,
   style,
+  rotation = '0deg'
 }: LeafIconSlimProps) => {
   return (
-    <View style={style}>
+    <View style={[style, { transform: [{ rotate: rotation }] }]}>
       <Svg
         width={width}
         height={height}
