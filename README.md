@@ -7,6 +7,8 @@ Colors:
 
 Things I will do:
 - Going to add setup instructions to README
+- Make take a step open browser to my website
+- Extract everything into a single screen?
 
 Things I'd like to do:
 - Couldn't get the font any thicker
