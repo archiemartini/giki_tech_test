@@ -29,7 +29,7 @@ const Hero = ({ footprintValue }: { footprintValue: string }) => {
         <LeafIconWide testID="leaf-icon-wide-1" style={{ marginTop: -8 }} />
       </View>
       <View style={{ position: "absolute", bottom: 0, left: 0 }}>
-        <LeafIconWide testID="leaf-icon-wide-2" style={{}} rotation={"180deg"} />
+        <LeafIconWide testID="leaf-icon-wide-2" rotation={"180deg"} />
         <LeafIconSlim testID="leaf-icon-slim-2" style={{ marginTop: -15 }} rotation={"180deg"} />
       </View>
       <Image
@@ -83,6 +83,7 @@ const styles = StyleSheet.create({
     marginLeft: 25,
   },
   text: {
+    fontFamily: 'Poppins_700Bold',
     textAlign: "center",
     fontWeight: "bold",
   },

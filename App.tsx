@@ -1,10 +1,11 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import formatNumberWithCommas from "./utils/formatNumberWithCommas";
 import Hero from "./components/Hero";
 import data from "./data.json";
 import EstimationInfo from "./components/EstimationInfo";
 import Target2030 from "./components/Target2030";
+import { useFonts, Poppins_700Bold } from "@expo-google-fonts/poppins";
 
 export default function App() {
   const footprintValue = formatNumberWithCommas(data.footprint);
@@ -13,6 +14,15 @@ export default function App() {
   const twentyThirtyTargetValue = formatNumberWithCommas(
     data.twenty_thirty_target,
   );
+
+  let [fontsLoaded] = useFonts({
+    Poppins_700Bold,
+  });
+
+  if (!fontsLoaded) {
+    return <View style={styles.container}><Text>Loading...</Text></View>;
+  }
+
 
   return (
     <View style={styles.container}>
