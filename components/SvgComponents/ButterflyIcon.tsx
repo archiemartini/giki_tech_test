@@ -1,15 +1,15 @@
-import React from 'react';
-import { View, StyleProp, ViewStyle } from 'react-native';
-import Svg, { Path } from 'react-native-svg';
+import React from "react";
+import { View, StyleProp, ViewStyle } from "react-native";
+import Svg, { Path } from "react-native-svg";
 
 interface ButterflyIconProps {
   width?: number | string;
   height?: number | string;
-  style?: StyleProp<ViewStyle>
+  style?: StyleProp<ViewStyle>;
 }
 
-const ButterflyIcon = ({ 
-  width = 68, 
+const ButterflyIcon = ({
+  width = 68,
   height = 55,
   style,
 }: ButterflyIconProps) => {

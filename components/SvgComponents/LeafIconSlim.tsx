@@ -1,7 +1,6 @@
-import * as React from 'react';
-import { View, StyleProp, ViewStyle } from 'react-native';
-import Svg, { Path } from 'react-native-svg';
-
+import * as React from "react";
+import { View, StyleProp, ViewStyle } from "react-native";
+import Svg, { Path } from "react-native-svg";
 
 interface LeafIconSlimProps {
   width?: number;
@@ -14,16 +13,11 @@ const LeafIconSlim = ({
   width = 55,
   height = 48,
   style,
-  rotation = '0deg'
+  rotation = "0deg",
 }: LeafIconSlimProps) => {
   return (
     <View style={[style, { transform: [{ rotate: rotation }] }]}>
-      <Svg
-        width={width}
-        height={height}
-        viewBox="0 0 55 48"
-        fill="none"
-      >
+      <Svg width={width} height={height} viewBox="0 0 55 48" fill="none">
         <Path
           d="M4.15098 47.1479C7.21505 35.5614 20.9088 10.0579 51.1715 0.735964C45.8426 13.4962 28.9781 40.6429 4.15098 47.1479Z"
           fill="#4E812D"
@@ -38,6 +32,6 @@ const LeafIconSlim = ({
       </Svg>
     </View>
   );
-}
+};
 
 export default LeafIconSlim;
