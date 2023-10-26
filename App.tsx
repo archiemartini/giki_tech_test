@@ -1,14 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { moderateScale } from 'react-native-size-matters';
 import formatNumberWithCommas from './utils/formatNumberWithCommas';
 import Hero from './components/Hero';
-import data from './data.json'
-
-// replicating value received from backend, assuming an integer value
-const FOOTPRINT_VALUE = 7565
-const END_OF_YEAR_TARGET_VALUE = 5855
-const LEFT_TO_CUT_VALUE = 409
-const TWENTY_THIRTY_TARGET_VALUE = 2500
+import data from './data.json';
 
 export default function App() {
   const footprintValue = formatNumberWithCommas(data.footprint)
@@ -22,20 +17,20 @@ export default function App() {
       <View style={styles.estimationContainer}>
         <View style={{width: 100}}>
           <Text 
-            style={{color: '#c44170', ...styles.text}}
+            style={[styles.pink, styles.text]}
           >
-            End of year target
+            End of{"\n"} year target
           </Text>
           <Text 
-            style={{fontSize: 25, color: '#5e2b68', ...styles.text}}
+            style={[styles.valueText,styles.text]}
           >
             {endOfYearTargetValue}
-            <Text style={{fontWeight: 'bold', fontSize: 10}}
+            <Text style={styles.unitDescriptorText}
             > kg
             </Text>
           </Text>
           <Text 
-            style={{fontSize: 8, color: '#5e2b68', ...styles.text}}
+            style={{fontSize: moderateScale(8), color: '#5e2b68', ...styles.text}}
           >
             of carbon emissions
           </Text>
@@ -44,26 +39,26 @@ export default function App() {
           style={{width: 100}}
         >
           <Text 
-            style={{color: '#c44170', ...styles.text}}
+            style={[styles.pink, styles.text]}
           >
             Left to cut this year
           </Text>
           <Text 
-            style={[{fontSize: 25, color: '#5e2b68'}, styles.text]}
+            style={[styles.valueText, styles.text]}
           >
             {leftToCutValue}
             <Text 
-              style={{fontWeight: 'bold', fontSize: 10}}
+              style={styles.unitDescriptorText}
             > kg
             </Text>
           </Text>
-          <Text style={{fontSize: 8, color: '#5e2b68', ...styles.text}}>
+          <Text style={[styles.carbonInfoText, styles.text]}>
             of carbon emissions
           </Text>
         </View>
       </View>
-      <View style={[styles.twentyThirtyTarget]}>
-        <Text style={styles.twentyThirtyTargetInner}>Your 2030 target is {twentyThirtyTargetValue} kg</Text>
+      <View style={[styles.twentyThirtyTargetView]}>
+        <Text style={styles.twentyThirtyTargetText}>Your 2030 target is {twentyThirtyTargetValue} kg</Text>
       </View>
     </View>
   );
@@ -87,17 +82,38 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: 'bold',
   },
-  twentyThirtyTarget: {
+  valueText: {
+    fontSize: moderateScale(25),
+    color: '#5e2b68',
+  },
+  unitDescriptorText: {
+      fontWeight: 'bold',
+      fontSize: moderateScale(10)
+  },
+  carbonInfoText:   {
+    fontSize: moderateScale(8), 
+    color: '#5e2b68'
+  },
+  twentyThirtyTargetView: {
     paddingVertical: 10,
     paddingHorizontal: 20,
     backgroundColor: '#ebd7ee',
     borderRadius: 100,
     fontWeight: 'bold',
   },
-  twentyThirtyTargetInner: {
+  twentyThirtyTargetText: {
     color: '#5e2b68',
     borderRadius: 100,
     fontWeight: 'bold',
-    fontSize: 10
+    fontSize: moderateScale(10)
   },
+  pink: {
+    color: '#c44170'
+  },
+  purple: {
+    color: '#c44170'
+  },
+  lilac: {
+    color: '#c44170'
+  }
 });

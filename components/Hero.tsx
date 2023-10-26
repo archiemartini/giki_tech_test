@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, ImageSourcePropType } from 'react-native';
+import { moderateScale } from 'react-native-size-matters';
 import LeafIconSlim from './SvgComponents/LeafIconSlim';
 import LeafIconWide from './SvgComponents/LeafIconWide';
 import ButterflyIcon from './SvgComponents/ButterflyIcon';
@@ -15,7 +16,7 @@ const Hero = ({
   return (
     <View style={styles.container}>
         <Image
-          style={{height: '90%', position: 'absolute'}}
+          style={styles.purpleCloud}
           source={purpleCloudPNG}
           resizeMode="contain"
         />
@@ -36,32 +37,32 @@ const Hero = ({
           />
         </View>
         <Image
-          style={{height: '85%', position: 'relative'}}
+          style={styles.whiteCloud}
           source={whiteCloudPNG}
           resizeMode="contain"
         />
         <ButterflyIcon
-          style={{position: 'absolute', top: 0, left: 0, marginTop: 25, marginLeft: 25}}
+          style={styles.butterfly}
         />
         <View style={{position: 'absolute', alignItems: 'center'}}>
           <Text 
-              style={{fontSize: 12, marginTop: 10, color: '#c44170', ...styles.text}}
+              style={[styles.footprintText, styles.text]}
             >
               Your footprint
             </Text>
-            <Text style={[{fontSize: 25, color: '#5e2b68'}, styles.text]}>
+            <Text style={[styles.valueText, styles.text]}>
               {footprintValue}
-              <Text style={{fontWeight: 'bold', fontSize: 12}}
+              <Text style={styles.unitDescriptorText}
               > kg
               </Text>
             </Text>
-            <Text style={{fontSize: 8, color: '#5e2b68', ...styles.text}}>
+            <Text style={[styles.carbonInfoText,styles.text]}>
               of carbon emissions
             </Text>
             <View 
               style={styles.takeAStep}
             >
-              <Text style={{color: '#fff', fontSize: 10, paddingHorizontal: -25, ...styles.text}}>Take a Step</Text>
+              <Text style={[styles.takeAStepInnerText, styles.text]}>Take a Step</Text>
             </View>
         </View>
     </View>
@@ -73,23 +74,56 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    width: 300,
-    height: 200,
+    width: moderateScale(300),
+    height: moderateScale(200),
+  },
+  purpleCloud: {
+    height: '90%', 
+    position: 'absolute'
+  },
+  whiteCloud: {
+    height: '85%', 
+    position: 'relative'
+  },
+  butterfly: {
+    position: 'absolute', 
+    top: 0, 
+    left: 0, 
+    marginTop: 25, 
+    marginLeft: 25
   },
   text: {
     textAlign: 'center',
     fontWeight: 'bold',
   },
-  pink: {
+  footprintText: {
+    fontSize: moderateScale(12), 
+    marginTop: 10, 
     color: '#c44170'
   },
+  valueText: {
+    fontSize: moderateScale(25), 
+    color: '#5e2b68'
+  },
+  unitDescriptorText: {
+    fontWeight: 'bold',
+    fontSize: moderateScale(12)
+  },
+  carbonInfoText: {
+    fontSize: moderateScale(8), 
+    color: '#5e2b68'
+  },
   takeAStep: {
-    marginTop: 5,
-    paddingHorizontal: 8,
+    marginTop: 8,
+    paddingHorizontal: 10,
     paddingVertical: 5,
     backgroundColor: '#5e2b68',
     borderRadius: 50,
     fontWeight: '100',
   },
+  takeAStepInnerText: {
+    color: '#fff', 
+    fontSize: moderateScale(10),
+  }
 });
 export default Hero;
