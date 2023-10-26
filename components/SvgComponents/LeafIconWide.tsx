@@ -7,7 +7,7 @@ interface LeafIconWideProps {
   height?: number;
   style?: StyleProp<ViewStyle>;
   rotation?: string;
-  testID?: string
+  testID?: string;
 }
 
 const LeafIconWide = ({
@@ -18,7 +18,10 @@ const LeafIconWide = ({
   testID,
 }: LeafIconWideProps) => {
   return (
-    <View testID={testID} style={[style, { transform: [{ rotate: rotation }] }]}>
+    <View
+      testID={testID}
+      style={[style, { transform: [{ rotate: rotation }] }]}
+    >
       <Svg width={width} height={height} viewBox="0 0 86 30" fill="none">
         <Path
           d="M45.5631 0.766936C30.3631 -1.23306 9.22981 10.2669 0.563141 16.2669C0.563141 18.7671 29.5631 28.7668 48.0631 29.2668C62.8631 29.6668 79.2298 23.1001 85.5631 19.7668L70.5631 8.26678C68.5631 6.60017 60.7631 2.76694 45.5631 0.766936Z"

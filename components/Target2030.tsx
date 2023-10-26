@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   twentyThirtyTargetText: {
-    fontFamily: 'Poppins_700Bold',
+    fontFamily: "Poppins_700Bold",
     borderRadius: 100,
     fontWeight: "bold",
     fontSize: moderateScale(10),

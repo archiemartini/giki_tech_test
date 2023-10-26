@@ -1,7 +1,7 @@
 module.exports = {
   preset: "jest-expo",
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
+    "^.+\\.(ts|tsx)$": "ts-jest",
   },
   testMatch: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],

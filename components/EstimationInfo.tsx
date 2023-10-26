@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   text: {
-    fontFamily: 'Poppins_700Bold',
+    fontFamily: "Poppins_700Bold",
     textAlign: "center",
     fontWeight: "bold",
   },

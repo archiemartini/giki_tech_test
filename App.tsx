@@ -20,9 +20,12 @@ export default function App() {
   });
 
   if (!fontsLoaded) {
-    return <View style={styles.container}><Text>Loading...</Text></View>;
+    return (
+      <View style={styles.container}>
+        <Text>Loading...</Text>
+      </View>
+    );
   }
-
 
   return (
     <View style={styles.container}>

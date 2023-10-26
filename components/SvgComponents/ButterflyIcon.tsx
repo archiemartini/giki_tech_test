@@ -6,7 +6,7 @@ interface ButterflyIconProps {
   width?: number | string;
   height?: number | string;
   style?: StyleProp<ViewStyle>;
-  testID: string
+  testID: string;
 }
 
 const ButterflyIcon = ({

@@ -21,7 +21,9 @@ Clone this repo and `cd` into the root directory. Once there...
 npm install
 expo start
 ```
+
 Run tests with
+
 ```
 npm test
 ```

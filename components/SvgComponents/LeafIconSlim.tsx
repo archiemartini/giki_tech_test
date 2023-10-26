@@ -7,7 +7,7 @@ interface LeafIconSlimProps {
   height?: number;
   style?: StyleProp<ViewStyle>;
   rotation?: string;
-  testID?: string
+  testID?: string;
 }
 
 const LeafIconSlim = ({
@@ -18,7 +18,10 @@ const LeafIconSlim = ({
   testID,
 }: LeafIconSlimProps) => {
   return (
-    <View testID={testID} style={[style, { transform: [{ rotate: rotation }] }]}>
+    <View
+      testID={testID}
+      style={[style, { transform: [{ rotate: rotation }] }]}
+    >
       <Svg width={width} height={height} viewBox="0 0 55 48" fill="none">
         <Path
           d="M4.15098 47.1479C7.21505 35.5614 20.9088 10.0579 51.1715 0.735964C45.8426 13.4962 28.9781 40.6429 4.15098 47.1479Z"

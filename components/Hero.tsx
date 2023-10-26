@@ -26,12 +26,26 @@ const Hero = ({ footprintValue }: { footprintValue: string }) => {
         resizeMode="contain"
       />
       <View style={{ position: "absolute", top: 0, right: 0 }}>
-        <LeafIconSlim testID="leaf-icon-slim-1" style={{position: 'absolute',  right: 35, top: 10}} />
-        <LeafIconWide testID="leaf-icon-wide-1" style={{position: 'absolute', right: 0, top: 40}} />
+        <LeafIconSlim
+          testID="leaf-icon-slim-1"
+          style={{ position: "absolute", right: 35, top: 10 }}
+        />
+        <LeafIconWide
+          testID="leaf-icon-wide-1"
+          style={{ position: "absolute", right: 0, top: 40 }}
+        />
       </View>
       <View style={{ position: "absolute", bottom: 0, left: 0 }}>
-        <LeafIconWide testID="leaf-icon-wide-2" style={{position: 'absolute', bottom: 15, left: 8}} rotation={"180deg"}  />
-        <LeafIconSlim testID="leaf-icon-slim-2" style={{position: 'absolute', bottom: -15, left: 45}} rotation={"180deg"} />
+        <LeafIconWide
+          testID="leaf-icon-wide-2"
+          style={{ position: "absolute", bottom: 15, left: 8 }}
+          rotation={"180deg"}
+        />
+        <LeafIconSlim
+          testID="leaf-icon-slim-2"
+          style={{ position: "absolute", bottom: -15, left: 45 }}
+          rotation={"180deg"}
+        />
       </View>
       <Image
         testID="white-cloud"
@@ -83,7 +97,7 @@ const styles = StyleSheet.create({
     left: 20,
   },
   text: {
-    fontFamily: 'Poppins_700Bold',
+    fontFamily: "Poppins_700Bold",
     textAlign: "center",
     fontWeight: "bold",
   },
