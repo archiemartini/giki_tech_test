@@ -30,7 +30,9 @@ export default function App() {
           </Text>
         </View>
         <View style={{ width: 100 }}>
-          <Text style={[styles.pink, styles.text]}>Left to cut this year</Text>
+          <Text style={[styles.pink, styles.text]}>
+            Left to cut this year
+          </Text>
           <Text style={[styles.valueText, styles.text, styles.purple]}>
             {leftToCutValue}
             <Text style={styles.unitDescriptorText}> kg</Text>
