@@ -3,13 +3,17 @@
 Tech test to replicate the given screen `./assets/readme/visual.jpeg`
 ![Reference image](./assets/readme/visual.jpeg)
 
-Here is my finished screen on iphone 15 max...
+Here is my finished screen on iPhone 15 max...
 
 ![Screen on iPhone 15](./assets/readme/iphone15.png)
 
-Here is my finished screen on iphone 13 mini...
+On iPhone 13 mini...
 
 ![Screen on iPhone 13 mini](./assets/readme/iphone13mini.png)
+
+And Samsung S20...
+
+![Screen on Samsung S20](./assets/readme/samsungS20.jpeg)
 
 ## Project setup
 
