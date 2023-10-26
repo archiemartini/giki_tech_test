@@ -6,15 +6,17 @@ interface ButterflyIconProps {
   width?: number | string;
   height?: number | string;
   style?: StyleProp<ViewStyle>;
+  testID: string
 }
 
 const ButterflyIcon = ({
   width = 68,
   height = 55,
   style,
+  testID,
 }: ButterflyIconProps) => {
   return (
-    <View style={style}>
+    <View testID={testID} style={style}>
       <Svg width={width} height={height} viewBox="0 0 68 55" fill="none">
         <Path
           d="M23.9374 24.8703C30.4213 29.1929 45.01 33.5155 51.4939 35.1365C48.9724 38.7386 43.6052 46.1588 42.3084 47.0234C40.6874 48.104 19.6149 51.8863 10.4294 50.8056C1.24384 49.725 -1.45772 49.1847 0.703568 41.0798C2.4326 34.5959 10.0691 32.975 13.6713 32.975C8.48419 29.5169 9.34871 25.4106 10.4294 23.7897C13.5168 20.7021 17.3394 21.1063 20.125 22.2458C19.8967 22.0541 20.1953 22.2039 20.7306 22.512C21.5835 22.9135 22.3126 23.3711 22.8568 23.7897C22.1104 23.3304 21.2909 22.8345 20.7306 22.512C20.535 22.4199 20.3329 22.3308 20.125 22.2458C20.4073 22.4828 21.4952 23.2422 23.9374 24.8703Z"

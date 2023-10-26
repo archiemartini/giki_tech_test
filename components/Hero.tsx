@@ -20,6 +20,7 @@ const Hero = ({ footprintValue }: { footprintValue: string }) => {
   return (
     <View style={styles.container}>
       <Image
+        testID="purple-cloud"
         style={styles.purpleCloud}
         source={purpleCloudPNG}
         resizeMode="contain"
@@ -33,11 +34,12 @@ const Hero = ({ footprintValue }: { footprintValue: string }) => {
         <LeafIconSlim testID="leaf-icon-slim-2" style={{position: 'absolute', bottom: -15, left: 45}} rotation={"180deg"} />
       </View>
       <Image
+        testID="white-cloud"
         style={styles.whiteCloud}
         source={whiteCloudPNG}
         resizeMode="contain"
       />
-      <ButterflyIcon style={styles.butterfly} />
+      <ButterflyIcon testID="butterfly-icon" style={styles.butterfly} />
       <View style={{ position: "absolute", alignItems: "center" }}>
         <Text style={[styles.footprintText, styles.text, styles.pink]}>
           Your footprint
