@@ -25,14 +25,13 @@ Clone this repo and `cd` into the root directory. Once there...
 npm install
 expo start
 ```
+Follow the prompts to load the app onto your chosen device.
 
 Run tests with
 
 ```
 npm test
 ```
-
-Follow the prompts to load the app onto your chosen device.
 
 ### Dependencies
 
