@@ -25,12 +25,12 @@ const Hero = ({ footprintValue }: { footprintValue: string }) => {
         resizeMode="contain"
       />
       <View style={{ position: "absolute", top: 0, right: 0 }}>
-        <LeafIconSlim style={{ marginTop: 20, marginLeft: 10 }} />
-        <LeafIconWide style={{ marginTop: -8 }} />
+        <LeafIconSlim testID="leaf-icon-slim-1" style={{ marginTop: 20, marginLeft: 10 }} />
+        <LeafIconWide testID="leaf-icon-wide-1" style={{ marginTop: -8 }} />
       </View>
       <View style={{ position: "absolute", bottom: 0, left: 0 }}>
-        <LeafIconWide style={{}} rotation={"180deg"} />
-        <LeafIconSlim style={{ marginTop: -15 }} rotation={"180deg"} />
+        <LeafIconWide testID="leaf-icon-wide-2" style={{}} rotation={"180deg"} />
+        <LeafIconSlim testID="leaf-icon-slim-2" style={{ marginTop: -15 }} rotation={"180deg"} />
       </View>
       <Image
         style={styles.whiteCloud}
