@@ -7,6 +7,7 @@ import EstimationInfo from "../components/EstimationInfo";
 import Target2030 from "../components/Target2030";
 
 export default function HomeScreen() {
+  // assuming/mocking data coming from the backend in json format, then using a numberUtil to stringify and add commas in the thousands
   const footprintValue = formatNumberWithCommas(data.footprint);
   const endOfYearTargetValue = formatNumberWithCommas(data.end_of_year_target);
   const leftToCutValue = formatNumberWithCommas(data.left_to_cut);
