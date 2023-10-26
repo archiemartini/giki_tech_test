@@ -25,12 +25,12 @@ const Hero = ({ footprintValue }: { footprintValue: string }) => {
         resizeMode="contain"
       />
       <View style={{ position: "absolute", top: 0, right: 0 }}>
-        <LeafIconSlim testID="leaf-icon-slim-1" style={{ marginTop: 20, marginLeft: 10 }} />
-        <LeafIconWide testID="leaf-icon-wide-1" style={{ marginTop: -8 }} />
+        <LeafIconSlim testID="leaf-icon-slim-1" style={{position: 'absolute',  right: 35, top: 10}} />
+        <LeafIconWide testID="leaf-icon-wide-1" style={{position: 'absolute', right: 0, top: 40}} />
       </View>
       <View style={{ position: "absolute", bottom: 0, left: 0 }}>
-        <LeafIconWide testID="leaf-icon-wide-2" rotation={"180deg"} />
-        <LeafIconSlim testID="leaf-icon-slim-2" style={{ marginTop: -15 }} rotation={"180deg"} />
+        <LeafIconWide testID="leaf-icon-wide-2" style={{position: 'absolute', bottom: 10, left: 8}} rotation={"180deg"}  />
+        <LeafIconSlim testID="leaf-icon-slim-2" style={{position: 'absolute', bottom: -20, left: 40}} rotation={"180deg"} />
       </View>
       <Image
         style={styles.whiteCloud}
@@ -68,19 +68,17 @@ const styles = StyleSheet.create({
     height: moderateScale(200),
   },
   purpleCloud: {
-    height: "90%",
+    height: "95%",
     position: "absolute",
   },
   whiteCloud: {
-    height: "85%",
+    height: "87%",
     position: "relative",
   },
   butterfly: {
     position: "absolute",
-    top: 0,
-    left: 0,
-    marginTop: 25,
-    marginLeft: 25,
+    top: 25,
+    left: 18,
   },
   text: {
     fontFamily: 'Poppins_700Bold',
