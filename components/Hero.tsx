@@ -15,7 +15,7 @@ const Hero = ({
   return (
     <View style={styles.container}>
         <Image
-          style={{height: 165, position: 'absolute'}}
+          style={{height: '90%', position: 'absolute'}}
           source={purpleCloudPNG}
           resizeMode="contain"
         />
@@ -36,7 +36,7 @@ const Hero = ({
           />
         </View>
         <Image
-          style={{height: 150, position: 'relative'}}
+          style={{height: '85%', position: 'relative'}}
           source={whiteCloudPNG}
           resizeMode="contain"
         />

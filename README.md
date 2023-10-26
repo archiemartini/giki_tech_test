@@ -13,6 +13,7 @@ Things I will do:
 
 Things I'd like to do:
 - Couldn't get the font any thicker
+- Wish I could make the exact positioning of the SVGs responsive but mannnnn
 
 Dependencies
 - react-native-svg

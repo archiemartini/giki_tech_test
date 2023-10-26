@@ -3,8 +3,8 @@ import { View, StyleProp, ViewStyle } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 
 interface ButterflyIconProps {
-  width?: number;
-  height?: number;
+  width?: number | string;
+  height?: number | string;
   style?: StyleProp<ViewStyle>
 }
 

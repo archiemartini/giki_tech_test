@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import formatNumberWithCommas from './utils/formatNumberWithCommas';
 import Hero from './components/Hero';
+import data from './data.json'
 
 // replicating value received from backend, assuming an integer value
 const FOOTPRINT_VALUE = 7565
@@ -10,10 +11,10 @@ const LEFT_TO_CUT_VALUE = 409
 const TWENTY_THIRTY_TARGET_VALUE = 2500
 
 export default function App() {
-  const footprintValue = formatNumberWithCommas(FOOTPRINT_VALUE)
-  const endOfYearTargetValue = formatNumberWithCommas(END_OF_YEAR_TARGET_VALUE)
-  const leftToCutValue = formatNumberWithCommas(LEFT_TO_CUT_VALUE)
-  const twentyThirtyTargetValue = formatNumberWithCommas(TWENTY_THIRTY_TARGET_VALUE)
+  const footprintValue = formatNumberWithCommas(data.footprint)
+  const endOfYearTargetValue = formatNumberWithCommas(data.end_of_year_target)
+  const leftToCutValue = formatNumberWithCommas(data.left_to_cut)
+  const twentyThirtyTargetValue = formatNumberWithCommas(data.twenty_thirty_target)
 
   return (
     <View style={styles.container}>
