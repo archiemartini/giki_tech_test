@@ -4,6 +4,7 @@
     "target": "esnext",
     "jsx": "react-native",
     "moduleResolution": "node",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "resolveJsonModule": true
   }
 }
