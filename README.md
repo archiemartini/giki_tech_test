@@ -1,23 +1,34 @@
 # Giki tech test
 
-Colors:
+Tech test to replicate the given screen `./assets/readme/visual.jpeg`
+<div align="center">
+![Reference image]('./assets/readme/visual.jpeg')
+</div>
 
-- dark purple, #5e2b68
-- rich pink, #c44170
-- button lilac, #ebd7ee
+Here is my finished screen on iphone 15 max...
+<div align="center">
+![Reference image]('./assets/readme/iphone15.png')
+</div>
 
-Things I will do:
+Here is my finished screen on iphone 13 mini...
+<div align="center">
+![Reference image]('./assets/readme/iphone13mini.png')
+</div>
 
-- Going to add setup instructions to README
-- Make take a step open browser to my website
-- Extract everything into a single screen?
-- Increase size, a little small atm in the center of screen
+## Project setup
 
-Things I'd like to do:
+Ensure you have Expo CLI installed along with an appropriate simulator, or ExpoGo on a personal device connected to the same network as your machine.
 
-- Couldn't get the font any thicker
-- Wish I could make the exact positioning of the SVGs responsive but mannnnn
+Clone this repo and `cd` into the root directory. Once there...
+```
+npm install
+expo start
+```
+Follow the prompts to load the app onto your chosen device.
 
-Dependencies
+Revel in its beauty.
 
+### Dependencies
 - react-native-svg
+- react-native-testing-library
+- react-native-size-matters
