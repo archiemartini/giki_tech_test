@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
-import formatNumberWithCommas from "./utils/formatNumberWithCommas";
+import { formatNumberWithCommas } from "./utils/numberUtils";
 import Hero from "./components/Hero";
 import data from "./data.json";
 import EstimationInfo from "./components/EstimationInfo";
