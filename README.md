@@ -24,8 +24,6 @@ expo start
 
 Follow the prompts to load the app onto your chosen device.
 
-Revel in its beauty.
-
 ### Dependencies
 
 - react-native-svg
