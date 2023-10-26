@@ -17,12 +17,12 @@ export default function App() {
       <View style={styles.estimationContainer}>
         <View style={{width: 100}}>
           <Text 
-            style={[styles.pink, styles.text]}
+            style={[styles.text, styles.pink, ]}
           >
             End of{"\n"} year target
           </Text>
           <Text 
-            style={[styles.valueText,styles.text]}
+            style={[styles.valueText, styles.text, styles.purple]}
           >
             {endOfYearTargetValue}
             <Text style={styles.unitDescriptorText}
@@ -30,7 +30,7 @@ export default function App() {
             </Text>
           </Text>
           <Text 
-            style={{fontSize: moderateScale(8), color: '#5e2b68', ...styles.text}}
+            style={[styles.carbonInfoText, styles.text, styles.purple]}
           >
             of carbon emissions
           </Text>
@@ -44,7 +44,7 @@ export default function App() {
             Left to cut this year
           </Text>
           <Text 
-            style={[styles.valueText, styles.text]}
+            style={[styles.valueText, styles.text, styles.purple]}
           >
             {leftToCutValue}
             <Text 
@@ -52,13 +52,13 @@ export default function App() {
             > kg
             </Text>
           </Text>
-          <Text style={[styles.carbonInfoText, styles.text]}>
+          <Text style={[styles.carbonInfoText, styles.text, styles.purple]}>
             of carbon emissions
           </Text>
         </View>
       </View>
       <View style={[styles.twentyThirtyTargetView]}>
-        <Text style={styles.twentyThirtyTargetText}>Your 2030 target is {twentyThirtyTargetValue} kg</Text>
+        <Text style={[styles.twentyThirtyTargetText, styles.purple]}>Your 2030 target is {twentyThirtyTargetValue} kg</Text>
       </View>
     </View>
   );
@@ -84,25 +84,22 @@ const styles = StyleSheet.create({
   },
   valueText: {
     fontSize: moderateScale(25),
-    color: '#5e2b68',
   },
   unitDescriptorText: {
       fontWeight: 'bold',
       fontSize: moderateScale(10)
   },
   carbonInfoText:   {
-    fontSize: moderateScale(8), 
-    color: '#5e2b68'
+    fontSize: moderateScale(8)
   },
   twentyThirtyTargetView: {
+    backgroundColor: '#ebd7ee',
     paddingVertical: 10,
     paddingHorizontal: 20,
-    backgroundColor: '#ebd7ee',
     borderRadius: 100,
     fontWeight: 'bold',
   },
   twentyThirtyTargetText: {
-    color: '#5e2b68',
     borderRadius: 100,
     fontWeight: 'bold',
     fontSize: moderateScale(10)
@@ -111,9 +108,6 @@ const styles = StyleSheet.create({
     color: '#c44170'
   },
   purple: {
-    color: '#c44170'
+    color: '#5e2b68'
   },
-  lilac: {
-    color: '#c44170'
-  }
 });
