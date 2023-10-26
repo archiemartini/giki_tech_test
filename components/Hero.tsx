@@ -29,8 +29,8 @@ const Hero = ({ footprintValue }: { footprintValue: string }) => {
         <LeafIconWide testID="leaf-icon-wide-1" style={{position: 'absolute', right: 0, top: 40}} />
       </View>
       <View style={{ position: "absolute", bottom: 0, left: 0 }}>
-        <LeafIconWide testID="leaf-icon-wide-2" style={{position: 'absolute', bottom: 10, left: 8}} rotation={"180deg"}  />
-        <LeafIconSlim testID="leaf-icon-slim-2" style={{position: 'absolute', bottom: -20, left: 40}} rotation={"180deg"} />
+        <LeafIconWide testID="leaf-icon-wide-2" style={{position: 'absolute', bottom: 15, left: 8}} rotation={"180deg"}  />
+        <LeafIconSlim testID="leaf-icon-slim-2" style={{position: 'absolute', bottom: -15, left: 45}} rotation={"180deg"} />
       </View>
       <Image
         style={styles.whiteCloud}
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   butterfly: {
     position: "absolute",
     top: 25,
-    left: 18,
+    left: 20,
   },
   text: {
     fontFamily: 'Poppins_700Bold',
