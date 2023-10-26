@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, ImageSourcePropType } from 'react-native';
+import { StyleSheet, Platform, Text, View, TouchableOpacity, Image, ImageSourcePropType } from 'react-native';
 import { moderateScale } from 'react-native-size-matters';
 import LeafIconSlim from './SvgComponents/LeafIconSlim';
 import LeafIconWide from './SvgComponents/LeafIconWide';
@@ -46,24 +46,24 @@ const Hero = ({
         />
         <View style={{position: 'absolute', alignItems: 'center'}}>
           <Text 
-              style={[styles.footprintText, styles.text]}
+              style={[styles.footprintText, styles.text, styles.pink]}
             >
               Your footprint
             </Text>
-            <Text style={[styles.valueText, styles.text]}>
+            <Text style={[styles.valueText, styles.text, styles.purple]}>
               {footprintValue}
               <Text style={styles.unitDescriptorText}
               > kg
               </Text>
             </Text>
-            <Text style={[styles.carbonInfoText,styles.text]}>
+            <Text style={[styles.carbonInfoText,styles.text, styles.purple]}>
               of carbon emissions
             </Text>
-            <View 
-              style={styles.takeAStep}
+            <TouchableOpacity 
+              style={[styles.takeAStepView, styles.shadow]}
             >
               <Text style={[styles.takeAStepInnerText, styles.text]}>Take a Step</Text>
-            </View>
+            </TouchableOpacity>
         </View>
     </View>
   );
@@ -99,31 +99,50 @@ const styles = StyleSheet.create({
   footprintText: {
     fontSize: moderateScale(12), 
     marginTop: 10, 
-    color: '#c44170'
   },
   valueText: {
-    fontSize: moderateScale(25), 
-    color: '#5e2b68'
+    fontSize: moderateScale(25),
   },
   unitDescriptorText: {
     fontWeight: 'bold',
     fontSize: moderateScale(12)
   },
   carbonInfoText: {
-    fontSize: moderateScale(8), 
-    color: '#5e2b68'
+    fontSize: moderateScale(8),
   },
-  takeAStep: {
+  takeAStepView: {
     marginTop: 8,
     paddingHorizontal: 10,
     paddingVertical: 5,
-    backgroundColor: '#5e2b68',
     borderRadius: 50,
     fontWeight: '100',
+    backgroundColor: '#5e2b68',
   },
   takeAStepInnerText: {
     color: '#fff', 
     fontSize: moderateScale(10),
-  }
+  },
+  shadow: {
+    ...Platform.select({
+        ios: {
+            shadowColor: '#000',
+            shadowOffset: {
+                width: 0,
+                height: 2
+            },
+            shadowOpacity: 0.25,
+            shadowRadius: 3.84,
+        },
+        android: {
+            elevation: 5
+        }
+    })
+  },
+  pink: {
+    color: '#c44170'
+  },
+  purple: {
+    color: '#5e2b68'
+  },
 });
 export default Hero;
