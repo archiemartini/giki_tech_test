@@ -2,17 +2,17 @@
 
 Tech test to replicate the given screen `./assets/readme/visual.jpeg`
 <div align="center">
-![Reference image]('./assets/readme/visual.jpeg')
+![Reference image](./assets/readme/visual.jpeg)
 </div>
 
 Here is my finished screen on iphone 15 max...
 <div align="center">
-![Reference image]('./assets/readme/iphone15.png')
+![Screen on iPhone 15](./assets/readme/iphone15.png)
 </div>
 
 Here is my finished screen on iphone 13 mini...
 <div align="center">
-![Reference image]('./assets/readme/iphone13mini.png')
+![Screen on iPhone 13 mini](./assets/readme/iphone13mini.png)
 </div>
 
 ## Project setup
